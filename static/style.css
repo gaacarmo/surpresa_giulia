@@ -1,0 +1,25 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f8ff;
+    color: #003366;
+}
+
+.title {
+    font-family: 'Dancing Script', cursive;
+    color: #0056b3;
+    font-size: 2.5rem;
+}
+
+.carousel-inner img {
+    height: 300px;
+    object-fit: cover;
+}
+
+.dates-section {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.clock-section {
+    margin-top: 20px;
+}

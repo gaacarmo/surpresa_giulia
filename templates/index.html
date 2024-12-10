@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giulia + Gabriel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <div class="container text-center py-5">
+        <h1 class="title mb-4">Para minha bella,<br> Giulia 🩵</h1>
+
+        <!-- Carrossel de Fotos -->
+        <div id="carouselPhotos" class="carousel slide mb-5" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                {% for photo in photos %}
+                <div class="carousel-item {% if loop.first %}active{% endif %}">
+                    <img src="{{ photo }}" class="d-block w-100" alt="Foto">
+                </div>
+                {% endfor %}
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselPhotos" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselPhotos" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+        </div>
+
+        <!-- Contagem de Dias Importantes -->
+        <div id="dates" class="dates-section mb-4">
+            <h3 class="mb-3">Nossas Datas Importantes</h3>
+            <p id="firstKiss">Calculando...</p>
+            <p id="firstEuTeAmo">Calculando...</p>
+            <p id="firstTalk">Calculando...</p>
+            <p id="firstDate">Calculando...</p>
+        </div>
+
+        <!-- Relógio Atual -->
+        <div id="clock" class="clock-section">
+            <h3>Data e Hora Atual</h3>
+            <p id="currentTime">Calculando...</p>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // Atualiza o relógio
+        const updateClock = () => {
+            const now = new Date();
+            const formattedTime = now.toLocaleString();
+            document.getElementById("currentTime").textContent = formattedTime;
+        };
+
+        // Calcula a contagem de dias importantes
+        const updateDates = () => {
+            // Datas marcantes (ajuste para suas datas reais)
+            const firstKissDate = new Date("2024-11-08T00:00:00"); // Exemplo: Primeiro beijo
+            const firstEuTeAmo = new Date("2024-09-08T00:00:00")
+            const firstTalk = new Date("2023-09-08T00:00:00")
+            const firstDate = new Date("2024-07-05T00:00:00")
+            const now = new Date();
+
+           
+            const daysSinceFirstKiss = Math.floor((now - firstKissDate) / (1000 * 60 * 60 * 24));
+            document.getElementById("firstKiss").textContent = `Faz ${daysSinceFirstKiss} dias desde nosso primeiro beijo. (08-11-24)`;
+            
+            const daysSinceFirstEuTeAmo = Math.floor((now - firstEuTeAmo) / (1000 * 60 * 60 * 24));
+            document.getElementById("firstEuTeAmo").textContent = `Faz ${daysSinceFirstEuTeAmo} dias desde nosso primeiro "eu te amo". (08-09-24)`;
+
+            const daysSinceFirstTalk = Math.floor((now - firstTalk) / (1000 * 60 * 60 * 24));
+            document.getElementById("firstTalk").textContent = `Faz ${daysSinceFirstTalk} dias desde a primeira vez que conversamos. (08-09-24)`;
+            
+            const daysSinceFirstDate = Math.floor((now - firstDate) / (1000 * 60 * 60 * 24));
+            document.getElementById("firstDate").textContent = `Faz ${daysSinceFirstDate} dias desde nosso primeiro encontro. (05-07-24)`;
+        };
+
+        // Inicializa as funções
+        updateClock();
+        updateDates();
+
+        // Atualiza o relógio a cada segundo
+        setInterval(updateClock, 1000);
+    });
+    </script>
+</body>
+</html>
