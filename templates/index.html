@@ -34,8 +34,9 @@
             <h3 class="mb-3">Nossas Datas Importantes</h3>
             <p id="firstKiss">Calculando...</p>
             <p id="firstEuTeAmo">Calculando...</p>
-            <p id="firstTalk">Calculando...</p>
             <p id="firstDate">Calculando...</p>
+            <p id="firstTalk">Calculando...</p>
+            
         </div>
 
         <!-- Relógio Atual -->
@@ -63,18 +64,22 @@
             const firstDate = new Date("2024-07-05T00:00:00")
             const now = new Date();
 
-           
-            const daysSinceFirstKiss = Math.floor((now - firstKissDate) / (1000 * 60 * 60 * 24));
-            document.getElementById("firstKiss").textContent = `Faz ${daysSinceFirstKiss} dias desde nosso primeiro beijo. (08-11-24)`;
-            
+            const daysSinceFirstTalk = Math.floor((now - firstTalk) / (1000 * 60 * 60 * 24));
+            document.getElementById("firstTalk").textContent = `Faz ${daysSinceFirstTalk} dias desde a primeira vez que conversamos. (08-09-23)`;
+
+            const daysSinceFirstDate = Math.floor((now - firstDate) / (1000 * 60 * 60 * 24));
+            document.getElementById("firstDate").textContent = `Faz ${daysSinceFirstDate} dias desde nosso primeiro encontro. (05-07-24)`;
+
             const daysSinceFirstEuTeAmo = Math.floor((now - firstEuTeAmo) / (1000 * 60 * 60 * 24));
             document.getElementById("firstEuTeAmo").textContent = `Faz ${daysSinceFirstEuTeAmo} dias desde nosso primeiro "eu te amo". (08-09-24)`;
 
-            const daysSinceFirstTalk = Math.floor((now - firstTalk) / (1000 * 60 * 60 * 24));
-            document.getElementById("firstTalk").textContent = `Faz ${daysSinceFirstTalk} dias desde a primeira vez que conversamos. (08-09-23)`;
+            const daysSinceFirstKiss = Math.floor((now - firstKissDate) / (1000 * 60 * 60 * 24));
+            document.getElementById("firstKiss").textContent = `Faz ${daysSinceFirstKiss} dias desde nosso primeiro beijo. (08-11-24)`;
+
+
             
-            const daysSinceFirstDate = Math.floor((now - firstDate) / (1000 * 60 * 60 * 24));
-            document.getElementById("firstDate").textContent = `Faz ${daysSinceFirstDate} dias desde nosso primeiro encontro. (05-07-24)`;
+                       
+        
         };
 
         // Inicializa as funções
