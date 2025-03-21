@@ -36,6 +36,7 @@
             <p id="firstEuTeAmo">Calculando...</p>
             <p id="firstDate">Calculando...</p>
             <p id="firstTalk">Calculando...</p>
+            <p id="pedido">Calculando...</p>
             
         </div>
 
@@ -62,6 +63,7 @@
             const firstEuTeAmo = new Date("2024-09-08T00:00:00")
             const firstTalk = new Date("2023-09-08T00:00:00")
             const firstDate = new Date("2024-07-05T00:00:00")
+            const pedidoDate = new Date("2025-02-02T00:00:00")
             const now = new Date();
 
             const daysSinceFirstTalk = Math.floor((now - firstTalk) / (1000 * 60 * 60 * 24));
@@ -75,6 +77,9 @@
 
             const daysSinceFirstKiss = Math.floor((now - firstKissDate) / (1000 * 60 * 60 * 24));
             document.getElementById("firstKiss").textContent = `Faz ${daysSinceFirstKiss} dias desde nosso primeiro beijo. (08-11-24)`;
+
+            const daysSincePedido = Math.floor((now - pedidoDate) / (1000 * 60 * 60 * 24));
+            document.getElementById("pedido").textContent = `Faz ${daysSincePedido} dias desde nosso pedido de namoro. (02-02-25)`;
 
 
             
