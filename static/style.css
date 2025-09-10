@@ -23,3 +23,19 @@ body {
 .clock-section {
     margin-top: 20px;
 }
+.btn-primary {
+    background-color: #0056b3;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+    background-color: #003366;
+}
+
+/* Esconde o input file (opcional, caso queira garantir) */
+#photoInput {
+    display: none;
+}
