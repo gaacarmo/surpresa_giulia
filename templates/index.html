@@ -51,39 +51,6 @@
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
         </button>
       </div>
-      <form
-        action="/upload"
-        method="post"
-        enctype="multipart/form-data"
-        class="mb-4"
-        id="uploadForm"
-      >
-        <input
-          type="file"
-          name="photo"
-          accept="image/*"
-          id="photoInput"
-          style="display: none"
-          required
-        />
-        <button
-          type="button"
-          class="btn btn-primary"
-          onclick="document.getElementById('photoInput').click();"
-        >
-          Adicionar Foto
-        </button>
-      </form>
-
-      <script>
-        document
-          .getElementById("photoInput")
-          .addEventListener("change", function () {
-            if (this.files.length > 0) {
-              document.getElementById("uploadForm").submit();
-            }
-          });
-      </script>
 
       <!-- Contagem de Dias Importantes -->
       <div id="dates" class="dates-section mb-4">
