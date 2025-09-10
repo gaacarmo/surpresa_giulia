@@ -15,7 +15,7 @@ def allowed_file(filename):
 def index():
     img_folder = "static/ela"
     photos = [
-        f"{img_folder}/{file}" for file in os.listdir(img_folder)
+        f"ela/{file}" for file in os.listdir(img_folder)
         if file.lower().endswith(('.png', '.jpg', '.jpeg', '.gif'))
     ]
     return render_template("index.html", photos=photos)
@@ -31,4 +31,3 @@ def upload():
         filename = secure_filename(file.filename)
         file.save(os.path.join(UPLOAD_FOLDER, filename))
     return redirect(url_for('index'))
-
