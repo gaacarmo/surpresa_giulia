@@ -23,19 +23,24 @@ body {
 .clock-section {
     margin-top: 20px;
 }
-.btn-primary {
-    background-color: #0056b3;
-    border: none;
-    font-family: 'Roboto', sans-serif;
+.clock {
+    font-size: 2rem;
     font-weight: bold;
-    transition: background 0.2s;
+    color: #614b44;
 }
-
-.btn-primary:hover, .btn-primary:focus {
-    background-color: #003366;
+.clock-label {
+    font-size: 1rem;
+    color: #888;
 }
-
-/* Esconde o input file (opcional, caso queira garantir) */
-#photoInput {
-    display: none;
+.footer {
+    margin-top: 30px;
+    font-size: 0.9rem;
+    color: #666;
+}
+.footer a {
+    color: #0056b3;
+    text-decoration: none;
+}
+.footer a:hover {
+    text-decoration: underline;
 }
